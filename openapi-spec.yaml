@@ -8,7 +8,7 @@ servers:
     -
         url: 'http://petstore.swagger.io/v1'
 paths:
-    /pets:
+    /v2/pets:
         get:
             tags:
                 - pets
@@ -55,7 +55,7 @@ paths:
                     description: unexpected error
             operationId: createPets
             summary: Create a pet
-    '/pets/{petId}':
+    '/v2/pets/{petId}':
         get:
             tags:
                 - pets
