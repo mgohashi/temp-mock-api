@@ -56,11 +56,11 @@ paths:
                 -
                     examples:
                         Dog:
-                            value: '1'
+                            value: 1
                     name: petId
                     description: The id of the pet to retrieve
                     schema:
-                        type: string
+                        type: integer
                     in: path
                     required: true
             responses:
@@ -78,10 +78,10 @@ paths:
             -
                 examples:
                     Dog:
-                        value: '1'
+                        value: 1
                 name: petId
                 schema:
-                    type: string
+                    type: integer
                 in: path
                 required: true
 components:
