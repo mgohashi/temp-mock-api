@@ -6,7 +6,7 @@ info:
         name: MIT
 servers:
     -
-        url: 'http://petstore.swagger.io/v1'
+        url: 'http://petstore.swagger.io/v2'
 paths:
     /v2/pets:
         get:
@@ -106,10 +106,13 @@ components:
                     type: string
                 tag:
                     type: string
+                version:
+                    type: integer
             example:
                 id: 55
                 name: some text
                 tag: some text
+                version: 2
         Pets:
             type: array
             items:
@@ -119,10 +122,12 @@ components:
                     id: 44
                     name: some text
                     tag: some text
+                    version: 2
                 -
                     id: 67
                     name: some text
                     tag: some text
+                    version: 2
         Error:
             required:
                 - code
@@ -150,21 +155,25 @@ components:
                                     id: 1
                                     name: Dog
                                     tag: pet
+                                    version: 2
                                 -
                                     id: 2
                                     name: Cat
                                     tag: pet
+                                    version: 2
             description: |-
                 [
                   {
                     "id": 1,
                     "name":"Dog",
-                    "tag": "pet"
+                    "tag": "pet",
+                    "version": "2"
                   },
                   {
                     "id": 2,
                     "name":"Cat",
-                    "tag": "pet"
+                    "tag": "pet",
+                    "version": "2"
                   }
                 ]
         Dog:
@@ -178,11 +187,13 @@ components:
                                 id: 1
                                 name: Dog
                                 tag: pet
+                                version: 2
             description: |-
                 {
                   "id": 1,
                   "name":"Dog",
-                  "tag": "pet"
+                  "tag": "pet",
+                  "version": "2"
                 }
         Cat:
             content:
@@ -195,11 +206,13 @@ components:
                                 id: 2
                                 name: Cat
                                 tag: pet
+                                version: 2
             description: |-
                 {
                   "id": 2,
                   "name":"Cat",
-                  "tag": "pet"
+                  "tag": "pet",
+                  "version": "2"
                 }
         Error:
             content:
@@ -211,8 +224,10 @@ components:
                             value:
                                 code: 1
                                 message: Internal Server Error
+                                version: 2
             description: |-
                 {
                     "code": 76,
-                    "message": "some text"
+                    "message": "some text",
+                    "version": "2"
                 }
