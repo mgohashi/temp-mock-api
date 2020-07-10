@@ -22,6 +22,8 @@ paths:
                     in: query
                     required: false
             responses:
+                '200':
+                    $ref: '#/components/responses/Pets-Response'
                 '500':
                     $ref: '#/components/responses/Error'
                 default:
