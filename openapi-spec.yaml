@@ -24,6 +24,8 @@ paths:
             responses:
                 '200':
                     $ref: '#/components/responses/Pets-Response'
+                '500':
+                    $ref: '#/components/responses/Error'
                 default:
                     content:
                         application/json:
@@ -37,6 +39,13 @@ paths:
                 - pets
             responses:
                 '201':
+                    content:
+                        text/plain:
+                            schema:
+                                type: number
+                            examples:
+                                Ok:
+                                    value: 1
                     description: Null response
                 default:
                     content:
