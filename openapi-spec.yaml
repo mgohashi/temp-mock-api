@@ -56,7 +56,7 @@ paths:
                 -
                     examples:
                         Dog:
-                            value: '"1"'
+                            value: '1'
                     name: petId
                     description: The id of the pet to retrieve
                     schema:
@@ -78,7 +78,7 @@ paths:
             -
                 examples:
                     Dog:
-                        value: '"1"'
+                        value: '1'
                 name: petId
                 schema:
                     type: string
